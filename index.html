@@ -16,6 +16,7 @@ layout: default
     const targetElement = document.querySelector("[data-lightning-out]");
     const FLOW_NAME = 'FlowRunnerTest';              // Set dynamically
     const ORG_DOMAIN = 'https://orgfarm-10be128149-dev-ed.develop.my.salesforce.com'; 
+    const EXP_SITE = 'https://orgfarm-10be128149-dev-ed.develop.my.site.com/flowrunner'
     
     
 
@@ -46,7 +47,7 @@ layout: default
               container
             );
           },
-          ORG_DOMAIN, 
+          EXP_SITE, 
           ACCESS_TOKEN
           
         );
