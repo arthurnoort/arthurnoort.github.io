@@ -12,7 +12,9 @@ layout: default
 
   <script>
 
-    const appName = 'c:OptOutFormWrapper';
+    const ACCESS_TOKEN = '00D0900000DY7Bp!ARMAQLRNztKy9pocQnGA6EmBmXzYlwpLt3vGQK6qEJrCWzZVU_8vaJrnaU01nXouHsGuO17BfgxIwE42oCaykXu._kYR69rJ';
+    
+    const  appName = 'c:OptOutFormWrapper';
     const componentName = 'c:optoutForm';
     const lightningEndpoint = 'https://demobluecanvas1-developer-edition.na162.force.com';
     const targetElement = document.querySelector("[data-lightning-out]");
@@ -49,7 +51,9 @@ layout: default
               container
             );
           },
-          ORG_DOMAIN // Salesforce domain
+          ORG_DOMAIN, 
+          ACCESS_TOKEN
+          
         );
 
 
