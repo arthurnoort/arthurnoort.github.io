@@ -6,7 +6,56 @@ layout: default
 
   <h1 class="page-heading">Posts</h1>
 
-    <h1 class="page-heading">hallo dit werkt</h1>
+    <script src="https://artomation.lightning.force.com/lightning/lightning.out.js"></script>
+
+<div data-lightning-out="true"></div>
+
+  <script>
+
+    const appName = 'c:OptOutFormWrapper';
+    const componentName = 'c:optoutForm';
+    const lightningEndpoint = 'https://demobluecanvas1-developer-edition.na162.force.com';
+    const targetElement = document.querySelector("[data-lightning-out]");
+    const componentAttributes = {};
+
+    const ACCESS_TOKEN = '00D0900000DY7Bp!ARMAQLRNztKy9pocQnGA6EmBmXzYlwpLt3vGQK6qEJrCWzZVU_8vaJrnaU01nXouHsGuO17BfgxIwE42oCaykXu._kYR69rJ';
+    const FLOW_NAME = 'FlowRunnerTest';              // Set dynamically
+    const ORG_DOMAIN = 'https://artomation.lightning.force.com'; // Update for your org
+
+
+          const flowInputValue = "arthurnoort@gmail.com"
+
+        $Lightning.use(
+          'c:LwrFlowApp', // Name of your Aura app
+          (cmp) => {
+            // Clear old component if needed
+            const container = document.querySelector("[data-lightning-out]");
+            container.innerHTML = ''; // Reset the container
+
+            // Create component
+            $Lightning.createComponent(
+              'c:FlowRunner', // Lightning component inside Aura app
+              {
+                flowName: FLOW_NAME,
+                inputVariables: [
+                  {
+                    name: 'EmailAddress',
+                    type: 'String',
+                    value: flowInputValue
+                  }
+                  // Add more vars as needed
+                ]
+              },
+              container
+            );
+          },
+          ORG_DOMAIN, // Salesforce domain
+          ACCESS_TOKEN
+        );
+
+
+  </script>
+
 
   <ul class="post-list">
     {% for post in site.posts %}
