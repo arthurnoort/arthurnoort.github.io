@@ -17,10 +17,10 @@ layout: default
     const lightningEndpoint = 'https://demobluecanvas1-developer-edition.na162.force.com';
     const targetElement = document.querySelector("[data-lightning-out]");
     const componentAttributes = {};
-
-    const ACCESS_TOKEN = '00D0900000DY7Bp!ARMAQLRNztKy9pocQnGA6EmBmXzYlwpLt3vGQK6qEJrCWzZVU_8vaJrnaU01nXouHsGuO17BfgxIwE42oCaykXu._kYR69rJ';
     const FLOW_NAME = 'FlowRunnerTest';              // Set dynamically
-    const ORG_DOMAIN = 'https://artomation.lightning.force.com'; // Update for your org
+    const ORG_DOMAIN = 'https://artomation.lightning.force.com'; 
+    
+    
 
 
           const flowInputValue = "arthurnoort@gmail.com"
@@ -49,8 +49,7 @@ layout: default
               container
             );
           },
-          ORG_DOMAIN, // Salesforce domain
-          ACCESS_TOKEN
+          ORG_DOMAIN // Salesforce domain
         );
 
 
